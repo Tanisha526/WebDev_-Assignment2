@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel agency landing page</title>
+    <style>
+
+                            /* section 1 */
+        .navbar{
+            display:flex;
+            flex-direction: row;
+            justify-content:space-between;   
+            /* align-items:center; */
+            padding:20px 50px;
+            background:white;
+            box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        }
+        nav{
+            margin-left:auto;
+        }
+        .nav-links{
+            list-style:none;
+            display:flex;
+            gap:25px;
+            flex-direction: row;
+        }
+        .nav-links a:hover{
+            color:#50ffa8;
+            transform: translateY(-2px);
+        }
+        .login-btn{
+            background:#7c5041;
+            color:rgb(110, 181, 222);
+            border:none;
+            padding:10x 22px;
+            border-radius:5px;
+            cursor:pointer;
+            transition:.3s;
+            font-size: 15px;
+        }
+        .lang-select{
+            padding:6px 8px;
+            border-radius:6px;
+            font-size:12px;
+            border:1.5px solid #d1d5db;
+            cursor:pointer;
+        }
+        .navbar a{
+            font-size:22px;
+            font-weight:700;
+            color:#ff7f50;
+            text-decoration:none;
+            letter-spacing:1px;
+        }
+
+                                /* section 2 */
+        .hero{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:60px 70px;
+            gap:60px;
+            background:linear-gradient(135deg, #fffdf8, #ffe2cf);
+        }
+
+        .hero-text{
+            width:50%;
+        }
+
+        .hero-text h1{
+            font-size:45px;
+            font-weight:700;
+            color:#1e293b;
+            line-height:1.2;
+            margin-bottom:15px;
+        }
+
+        .hero-text p{
+            font-size:18px;
+            color:#475569;
+            margin-bottom:25px;
+        }
+
+        .cta-btn{
+            background:#ff7f50;
+            padding:12px 28px;
+            color:white;
+            font-size:17px;
+            border:none;
+            border-radius:30px;
+            cursor:pointer;
+            transition: 0.3s;
+        }
+        .cta-btn:hover{
+            background:#ff915e;
+            transform:scale(1.05);
+        }
+        .hero-img img{
+            width:480px;
+            border-radius:15px;
+            filter: drop-shadow(0px 20px 40px rgba(0,0,0,0.15));
+            opacity:0.95;
+        }
+        .services{
+            text-align:center;
+            padding:80px 60px;
+            background:#fff;
+        }
+        .section-topic{
+            font-size:32px;
+            font-weight:700;
+            margin-bottom:50px;
+            color:#1e293b;
+        }
+        .section-cards{
+            display:flex;
+            justify-content:center;
+            gap:40px;
+            flex-wrap:wrap;
+        }
+        .section-card{
+            width:230px;
+            background:#ffffff;
+            padding:25px 20px;
+            border-radius:18px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.05);
+            transition: 0.4s;
+        }
+        .section-card img{
+            width:80px;
+            margin-bottom:15px;
+        }
+                                /* section 3 */
+        .top_destinations{
+            text-align:center;
+            padding:80px 60px;
+            background:#fff;
+        }
+        .places{
+            display:flex;
+            justify-content:center;
+            gap:40px;
+            flex-wrap:wrap;
+            margin-top:40px;
+        }
+        .place{
+            width:280px;
+            background:#fff;
+            border-radius:18px;
+            overflow:hidden;
+            box-shadow:0 10px 25px rgba(0,0,0,0.08);
+            transition:.4s;
+            cursor:pointer;
+        }
+        .place img{
+            width:100%;
+            height:200px;
+            object-fit:cover;
+        }
+        .place-info{
+            padding:18px;
+            text-align:left;
+        }
+
+                                /* section 4 */
+        .book_trip_steps{
+            display: flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            padding:80px 60px;
+            gap:60px;
+        }
+        .steps_leftside{
+            width:50%;
+        }
+        .step{
+            display:flex;
+            gap:20px;
+            margin-bottom:30px;
+        }
+        .step-icon{
+            width:45px;
+            height:45px;
+            border-radius:15px;
+            background:#fff;
+            padding:10px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .steps_rightside{
+            position:relative;
+            width:350px;
+        }
+        .steps-right-img{
+            width:100%;
+            border-radius:25px;
+            box-shadow:0 25px 60px rgba(0,0,0,0.1);
+        }
+
+                            /* section 5 */
+                            /* section 6 */
+        .brand_logos{
+            display: flex;
+            flex-direction: row;
+            align-items:center;
+            justify-content:center;
+            gap: 60px;
+            padding:80px 0;
+            background:white;
+        }
+        .brand_logo img{
+            width:100%;
+            filter:grayscale(100%);
+            opacity:0.8;
+            transition:.3s;
+        }
+        /* .brands img:hover{
+            opacity:1;
+            filter:grayscale(0);
+            transform:scale(1.05);
+        } */
+
+                            /* section 7 */
+        .newsletter{
+            text-align:center;
+            width:80%;
+            margin:auto;
+            background:#f8ebdb; 
+            padding:60px 40px;
+            border-radius:40px;
+            margin-top:80px;
+            margin-bottom:80px;
+            box-shadow:0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .newsletter h2{
+            font-size:28px;
+            font-weight:600;
+            width:70%;
+            margin:auto;
+            line-height:1.4;
+            margin-bottom:40px;
+        }
+
+
+        .subscribtion_info{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:20px;
+        }
+
+
+        .input-area{
+            background:white;
+            display:flex;
+            align-items:center;
+            gap:10px;
+            padding:12px 20px;
+            border-radius:30px;
+            width:350px;
+        }
+
+        .mail-icon{
+            font-size:20px;
+        }
+
+        .input-area input{
+            border:none;
+            outline:none;
+            width:100%;
+            font-size:16px;
+        }
+
+
+        .subscribe-btn{
+            background:#FF7F50;
+            color:white;
+            padding:12px 28px;
+            font-size:17px;
+            border:none;
+            border-radius:30px;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        .subscribe-btn:hover{
+            background:#FF9D73;
+            transform:scale(1.05);
+        }
+                                /* section 8 */
+        .footer-table{
+            border-collapse:collapse;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+                                <!-- section 1 -->
+    <header class="navbar">
+        <a href="#"> jadoo logo </a> <!-- directing to home -->
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Hotels</a></li>
+                <li><a href="#">Flights</a></li>
+                <li><a href="#">Bookings</a></li>
+                <li><button class="login-btn">Book with Jadoo</button></li>
+                <li>
+                <select class="lang-select">
+                    <option>ENG</option>
+                    <option>HIN</option>
+                    <option>FR</option>
+
+                </select>
+            </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+                                <!-- section 2  -->
+    <section class="hero">
+        <div class="hero-text">
+            <h3>BEST DESTINATIONS AROUND THE WORLD</h3>
+            <h1>Travel, enjoy and live a new and full life</h1>
+            <p>Explore new places, experience unforgettable moments, and make memories that last forever.</p>
+            <button class="cta-btn">Plan your Trip</button>
+        </div>
+
+        <div class="hero-img">
+            <img src="img2.avif" alt="travel image">
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="section-topic">
+                <h2>We offer best services</h2>
+        </div>
+
+        <div class="section-cards">
+            <div class="section-card">
+                <img src="weather_icon.jpeg" alt="weather icon">
+                <h3>Calculated weather</h3>
+                <p>Built Wicket longer admire do Barton vanity itself do in it.</p>
+            </div>
+            <div class="section-card">
+                <img src="aeroplane_icon.jpeg" alt="Aeroplane icon">
+                <h3>Best flights</h3>
+                <p>Engrossed listening. Park gate sell they west hard for the.</p>
+            </div>
+            <div class="section-card">
+                <img src="mike_icon.jpeg" alt="mike icon">
+                <h3>Local Events</h3>
+                <p>Barton vanity itself do in it. Preferd to men it engrossed listening.</p>
+            </div>
+            <div class="section-card">
+                <img src="settings_icon.jpeg" alt="Settings icon">
+                <h3>Customization</h3>
+                <p>We deliver outsourced aviation services for military customers</p>
+            </div>
+        </div>    
+    </section>
+
+                                <!-- section 3 -->
+    <section class="top_destinations">
+        <h2 class="section-topic">Top Destinations</h2>
+        <div class="places">
+            <div class="place">
+                <img src="rome.webp" alt="Rome">
+                <div class="place-info">
+                <h3>Rome,Italy</h3>
+                <h3>$5.42k</h3>
+                <span>10 days trip</span>
+                </div>
+            </div>
+            <div class="place">
+                <img src="london.webp" alt="London">
+                <div class="place-info">
+                <h3>London,England</h3>
+                <p>$4.2k</p>
+                <span>12 days trip</span>
+                </div>
+            </div>
+            <div class="place">
+                <img src="europe.webp" alt="Full Europe">
+                <div class="place-info">
+                <h3>Full Europe</h3>
+                <p>$15k</p>
+                <span>28 days trip</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+                                <!-- section 4 -->
+    <section class="book_trip_steps">
+    
+     <div class="steps_leftside">
+        <h2 style="font-size: 38px; font-weight:700; margin: 15px 0 40px; line-height:1.3;">
+            Book Your Next Trip In Three Easy Steps
+        </h2>
+
+        <div class="step">
+            <img src="icon1.png" class="step-icon">
+            <div>
+                <h3>Choose Destination</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+            </div>
+        </div>
+        <div class="step">
+            <img src="icon2.png" class="step-icon">
+            <div>
+                <h3>Make Payment</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+            </div>
+        </div>
+        <div class="step">
+            <img src="icon3.png" class="step-icon">
+            <div>
+                <h3>Reach Airport on Selected Date</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+            </div>
+        </div>
+    </div>
+    <div class="steps_rightside">
+            <img src="booking right side.jpeg" class="steps-right-img">
+    </div>
+    </section>
+
+                                <!-- section 5 -->
+                                <!-- section 6 -->
+    <section class="brand_logos">
+        <img src="logo1.jpeg" alt="Axon airlines">
+        <img src="logo2.jpeg" alt="Jetstar">
+        <img src="logo3.jpeg" alt="Qantas">
+        <img src="logo4.jpeg" alt="Alitalia">
+    </section>
+
+                                <!-- section 7 -->
+    <section class="newsletter">
+        <h2>Subscribe to get information, latest news and other
+    interesting offers about Cobham</h2>
+        <div class="subscribtion_info">
+            <div class="input-area">
+            <span class="mail-icon">📩</span>
+            <input type="email" placeholder="Your email">
+            </div>
+            <button class="subscribe-btn">Subscribe</button>
+        </div>
+    </section>
+
+                                <!-- section 8 -->
+    <footer class="footer">
+
+        <table class="footer-table">
+            <tr>
+                <td class="footer-brand">
+                <h2 class="footer-logo">Jadoo.</h2>
+                <p>Book your trip in minutes, get full control for much longer.</p>
+                </td>
+
+                <td class="footer-col">
+                <h3>Company</h3>
+                <a href="#">About</a><br>
+                <a href="#">Careers</a><br>
+                <a href="#">Mobile</a>
+                </td>
+            
+                <td class="footer-col">
+                <h3>Contact</h3>
+                <a href="#">Help/FAQ</a><br>
+                <a href="#">Press</a><br>
+                <a href="#">Affiliates</a>
+                </td>
+
+                <td class="footer-col">
+                <h3>More</h3>
+                <a href="#">Airline Fees</a><br>
+                <a href="#">Airline</a><br>
+                <a href="#">Low Fare Tips</a>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>
